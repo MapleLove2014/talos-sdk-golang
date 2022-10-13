@@ -10,9 +10,9 @@ import (
 	"fmt"
 	"strconv"
 
-	"github.com/XiaoMi/talos-sdk-golang/client"
-	"github.com/XiaoMi/talos-sdk-golang/thrift/message"
-	"github.com/XiaoMi/talos-sdk-golang/utils"
+	"github.com/MapleLove2014/talos-sdk-golang/client"
+	"github.com/MapleLove2014/talos-sdk-golang/thrift/message"
+	"github.com/MapleLove2014/talos-sdk-golang/utils"
 )
 
 type TalosProducerConfig struct {

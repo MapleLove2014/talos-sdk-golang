@@ -6,13 +6,13 @@ Install your specific service package with the following command.
 
 You can install the entire SDK to GoPath by go get:
 
-`$ go get github.com/XiaoMi/talos-sdk-golang`
+`$ go get github.com/MapleLove2014/talos-sdk-golang`
 
 2. Go modules
 
 Or add the module to your go.mod:
 
-`go mod edit -require=github.com/XiaoMi/talos-sdk-golang@v0.2.12`
+`go mod edit -require=github.com/MapleLove2014/talos-sdk-golang@v0.2.12`
 
 # Tutorial
 
@@ -24,8 +24,8 @@ To use SDK, import like this:
 
 ```
 import (
-	"github.com/XiaoMi/talos-sdk-golang/consumer"
-	"github.com/XiaoMi/talos-sdk-golang/utils"
+	"github.com/MapleLove2014/talos-sdk-golang/consumer"
+	"github.com/MapleLove2014/talos-sdk-golang/utils"
 	log "github.com/sirupsen/logrus"
 )
 

@@ -13,19 +13,19 @@ import (
 	"runtime"
 	"time"
 
-	"github.com/XiaoMi/talos-sdk-golang/thrift/auth"
-	"github.com/XiaoMi/talos-sdk-golang/thrift/common"
-	"github.com/XiaoMi/talos-sdk-golang/thrift/consumer"
-	"github.com/XiaoMi/talos-sdk-golang/thrift/message"
-	"github.com/XiaoMi/talos-sdk-golang/thrift/quota"
-	"github.com/XiaoMi/talos-sdk-golang/thrift/topic"
-	"github.com/XiaoMi/talos-sdk-golang/utils"
+	"github.com/MapleLove2014/talos-sdk-golang/thrift/auth"
+	"github.com/MapleLove2014/talos-sdk-golang/thrift/common"
+	"github.com/MapleLove2014/talos-sdk-golang/thrift/consumer"
+	"github.com/MapleLove2014/talos-sdk-golang/thrift/message"
+	"github.com/MapleLove2014/talos-sdk-golang/thrift/quota"
+	"github.com/MapleLove2014/talos-sdk-golang/thrift/topic"
+	"github.com/MapleLove2014/talos-sdk-golang/utils"
 
-	"github.com/XiaoMi/talos-sdk-golang/thrift/metric"
-	"github.com/XiaoMi/talos-sdk-golang/thrift/thrift"
+	"github.com/MapleLove2014/talos-sdk-golang/thrift/metric"
+	"github.com/MapleLove2014/talos-sdk-golang/thrift/thrift"
 )
 
-//interface for mock
+// interface for mock
 type TalosClientFactoryInterface interface {
 	NewTopicClient(url string) topic.TopicService
 	NewMessageClient(url string) message.MessageService

@@ -10,9 +10,9 @@ import (
 	"sync"
 	"time"
 
-	"github.com/XiaoMi/talos-sdk-golang/thrift/message"
-	"github.com/XiaoMi/talos-sdk-golang/thrift/topic"
-	"github.com/XiaoMi/talos-sdk-golang/utils"
+	"github.com/MapleLove2014/talos-sdk-golang/thrift/message"
+	"github.com/MapleLove2014/talos-sdk-golang/thrift/topic"
+	"github.com/MapleLove2014/talos-sdk-golang/utils"
 
 	"github.com/sirupsen/logrus"
 )

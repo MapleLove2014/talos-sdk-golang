@@ -14,7 +14,7 @@ import (
 	"strings"
 	"thrift/quota"
 
-	"github.com/XiaoMi/talos-sdk-golang/thrift/thrift"
+	"github.com/MapleLove2014/talos-sdk-golang/thrift/thrift"
 )
 
 func Usage() {

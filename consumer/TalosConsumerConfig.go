@@ -9,8 +9,8 @@ package consumer
 import (
 	"strconv"
 
-	"github.com/XiaoMi/talos-sdk-golang/client"
-	"github.com/XiaoMi/talos-sdk-golang/utils"
+	"github.com/MapleLove2014/talos-sdk-golang/client"
+	"github.com/MapleLove2014/talos-sdk-golang/utils"
 )
 
 type TalosConsumerConfig struct {

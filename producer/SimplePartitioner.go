@@ -9,7 +9,7 @@ package producer
 import (
 	"math"
 
-	"github.com/XiaoMi/talos-sdk-golang/utils"
+	"github.com/MapleLove2014/talos-sdk-golang/utils"
 )
 
 type SimplePartitioner struct {

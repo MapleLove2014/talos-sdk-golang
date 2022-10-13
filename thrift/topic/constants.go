@@ -7,10 +7,10 @@ import (
 	"bytes"
 	"fmt"
 
-	"github.com/XiaoMi/talos-sdk-golang/thrift/authorization"
-	"github.com/XiaoMi/talos-sdk-golang/thrift/common"
-	"github.com/XiaoMi/talos-sdk-golang/thrift/quota"
-	"github.com/XiaoMi/talos-sdk-golang/thrift/thrift"
+	"github.com/MapleLove2014/talos-sdk-golang/thrift/authorization"
+	"github.com/MapleLove2014/talos-sdk-golang/thrift/common"
+	"github.com/MapleLove2014/talos-sdk-golang/thrift/quota"
+	"github.com/MapleLove2014/talos-sdk-golang/thrift/thrift"
 )
 
 // (needed to ensure safety because of naive import list construction.)

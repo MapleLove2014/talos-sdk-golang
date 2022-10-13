@@ -10,9 +10,9 @@ import (
 	"flag"
 	"time"
 
-	"github.com/XiaoMi/talos-sdk-golang/consumer"
-	"github.com/XiaoMi/talos-sdk-golang/thrift/common"
-	"github.com/XiaoMi/talos-sdk-golang/utils"
+	"github.com/MapleLove2014/talos-sdk-golang/consumer"
+	"github.com/MapleLove2014/talos-sdk-golang/thrift/common"
+	"github.com/MapleLove2014/talos-sdk-golang/utils"
 )
 
 func main() {

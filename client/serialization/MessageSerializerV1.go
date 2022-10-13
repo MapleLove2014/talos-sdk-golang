@@ -10,7 +10,7 @@ import (
 	"bytes"
 	"encoding/binary"
 
-	"github.com/XiaoMi/talos-sdk-golang/thrift/message"
+	"github.com/MapleLove2014/talos-sdk-golang/thrift/message"
 )
 
 const (

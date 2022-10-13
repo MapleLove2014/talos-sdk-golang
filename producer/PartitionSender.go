@@ -13,9 +13,9 @@ import (
 
 	"sync/atomic"
 
-	"github.com/XiaoMi/talos-sdk-golang/thrift/message"
-	"github.com/XiaoMi/talos-sdk-golang/thrift/topic"
-	"github.com/XiaoMi/talos-sdk-golang/utils"
+	"github.com/MapleLove2014/talos-sdk-golang/thrift/message"
+	"github.com/MapleLove2014/talos-sdk-golang/thrift/topic"
+	"github.com/MapleLove2014/talos-sdk-golang/utils"
 	"github.com/sirupsen/logrus"
 )
 
@@ -58,10 +58,10 @@ func (m *ProducerMetrics) MarkPutMsgFailedTimes() {
 }
 
 func (m *ProducerMetrics) updateMetricsMap() {
-	m.producerMetricsMap[utils.PUT_MESSAGE_TIME]         = float64(atomic.LoadInt64(&m.putMsgDuration))
-	m.producerMetricsMap[utils.MAX_PUT_MESSAGE_TIME]     = float64(atomic.LoadInt64(&m.maxPutMsgDuration))
-	m.producerMetricsMap[utils.MIN_PUT_MESSAGE_TIME]     = float64(atomic.LoadInt64(&m.minPutMsgDuration))
-	m.producerMetricsMap[utils.PUT_MESSAGE_TIMES]        = float64(atomic.LoadInt32(&m.putMsgTimes)) / 60.0
+	m.producerMetricsMap[utils.PUT_MESSAGE_TIME] = float64(atomic.LoadInt64(&m.putMsgDuration))
+	m.producerMetricsMap[utils.MAX_PUT_MESSAGE_TIME] = float64(atomic.LoadInt64(&m.maxPutMsgDuration))
+	m.producerMetricsMap[utils.MIN_PUT_MESSAGE_TIME] = float64(atomic.LoadInt64(&m.minPutMsgDuration))
+	m.producerMetricsMap[utils.PUT_MESSAGE_TIMES] = float64(atomic.LoadInt32(&m.putMsgTimes)) / 60.0
 	m.producerMetricsMap[utils.PUT_MESSAGE_FAILED_TIMES] = float64(atomic.LoadInt32(&m.putMsgFailedTimes)) / 60.0
 }
 
@@ -241,7 +241,7 @@ func (s *PartitionSender) NewFalconMetrics() []*utils.FalconMetric {
 	tags.SetTag("type", s.talosProducerConfig.AlertType())
 	s.producerMetrics.updateMetricsMap()
 	for name, value := range s.producerMetrics.producerMetricsMap {
-		metric := utils.NewFalconMetric(s.talosProducerConfig.ProducerMetricFalconEndpoint() +
+		metric := utils.NewFalconMetric(s.talosProducerConfig.ProducerMetricFalconEndpoint()+
 			s.topicAndPartition.GetTopicName(), name,
 			s.talosProducerConfig.MetricFalconStep(), value, tags)
 		metrics = append(metrics, metric)

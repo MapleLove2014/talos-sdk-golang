@@ -9,7 +9,7 @@ package client
 import (
 	"strconv"
 
-	"github.com/XiaoMi/talos-sdk-golang/utils"
+	"github.com/MapleLove2014/talos-sdk-golang/utils"
 )
 
 type TalosClientConfig struct {
@@ -103,7 +103,7 @@ func InitClientConfig(prop *utils.Properties) *TalosClientConfig {
 		GALAXY_TALOS_CLIENT_FALCON_MONITOR_SWITCH,
 		strconv.FormatBool(GALAXY_TALOS_CLIENT_FALCON_MONITOR_SWITCH_DEFAULT)))
 
-	return &TalosClientConfig {
+	return &TalosClientConfig{
 		maxRetry:                     maxRetry,
 		clientTimeout:                clientTimeout,
 		clientConnTimeout:            clientConnTimeout,

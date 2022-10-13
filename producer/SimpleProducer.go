@@ -12,12 +12,12 @@ import (
 
 	"strconv"
 
-	"github.com/XiaoMi/talos-sdk-golang/client"
-	"github.com/XiaoMi/talos-sdk-golang/client/compression"
-	"github.com/XiaoMi/talos-sdk-golang/thrift/auth"
-	"github.com/XiaoMi/talos-sdk-golang/thrift/message"
-	"github.com/XiaoMi/talos-sdk-golang/thrift/topic"
-	"github.com/XiaoMi/talos-sdk-golang/utils"
+	"github.com/MapleLove2014/talos-sdk-golang/client"
+	"github.com/MapleLove2014/talos-sdk-golang/client/compression"
+	"github.com/MapleLove2014/talos-sdk-golang/thrift/auth"
+	"github.com/MapleLove2014/talos-sdk-golang/thrift/message"
+	"github.com/MapleLove2014/talos-sdk-golang/thrift/topic"
+	"github.com/MapleLove2014/talos-sdk-golang/utils"
 	"github.com/sirupsen/logrus"
 )
 

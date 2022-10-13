@@ -11,10 +11,10 @@ import (
 	"sync/atomic"
 	"time"
 
-	"github.com/XiaoMi/talos-sdk-golang/thrift/consumer"
-	"github.com/XiaoMi/talos-sdk-golang/thrift/message"
-	"github.com/XiaoMi/talos-sdk-golang/thrift/topic"
-	"github.com/XiaoMi/talos-sdk-golang/utils"
+	"github.com/MapleLove2014/talos-sdk-golang/thrift/consumer"
+	"github.com/MapleLove2014/talos-sdk-golang/thrift/message"
+	"github.com/MapleLove2014/talos-sdk-golang/thrift/topic"
+	"github.com/MapleLove2014/talos-sdk-golang/utils"
 	"github.com/sirupsen/logrus"
 )
 
@@ -74,11 +74,11 @@ func (m *ConsumerMetrics) MarkFetchInterval(fetchInterval int32) {
 }
 
 func (m *ConsumerMetrics) updateMetricsMap() {
-	m.consumerMetricsMap[utils.FETCH_MESSAGE_TIME] =         float64(atomic.LoadInt64(&m.fetchDuration))
-	m.consumerMetricsMap[utils.MAX_FETCH_MESSAGE_TIME] =     float64(atomic.LoadInt64(&m.maxFetchDuration))
-	m.consumerMetricsMap[utils.PROCESS_MESSAGE_TIME] =       float64(atomic.LoadInt64(&m.processDuration))
-	m.consumerMetricsMap[utils.MAX_PROCESS_MESSAGE_TIME] =   float64(atomic.LoadInt64(&m.maxProcessDuration))
-	m.consumerMetricsMap[utils.FETCH_MESSAGE_TIMES] =        float64(atomic.LoadInt32(&m.fetchTimes)) / 60.0
+	m.consumerMetricsMap[utils.FETCH_MESSAGE_TIME] = float64(atomic.LoadInt64(&m.fetchDuration))
+	m.consumerMetricsMap[utils.MAX_FETCH_MESSAGE_TIME] = float64(atomic.LoadInt64(&m.maxFetchDuration))
+	m.consumerMetricsMap[utils.PROCESS_MESSAGE_TIME] = float64(atomic.LoadInt64(&m.processDuration))
+	m.consumerMetricsMap[utils.MAX_PROCESS_MESSAGE_TIME] = float64(atomic.LoadInt64(&m.maxProcessDuration))
+	m.consumerMetricsMap[utils.FETCH_MESSAGE_TIMES] = float64(atomic.LoadInt32(&m.fetchTimes)) / 60.0
 	m.consumerMetricsMap[utils.FETCH_MESSAGE_FAILED_TIMES] = float64(atomic.LoadInt32(&m.fetchFailedTimes)) / 60.0
 }
 
@@ -199,7 +199,7 @@ func (r *MessageReader) NewFalconMetrics() []*utils.FalconMetric {
 
 	r.consumerMetrics.updateMetricsMap()
 	for name, value := range r.consumerMetrics.consumerMetricsMap {
-		metric := utils.NewFalconMetric(r.consumerConfig.ConsumerMetricFalconEndpoint() + r.consumerGroup,
+		metric := utils.NewFalconMetric(r.consumerConfig.ConsumerMetricFalconEndpoint()+r.consumerGroup,
 			name, r.consumerConfig.MetricFalconStep(), value, tags)
 		metrics = append(metrics, metric)
 	}

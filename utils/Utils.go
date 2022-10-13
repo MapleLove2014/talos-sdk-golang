@@ -17,11 +17,11 @@ import (
 	"sync/atomic"
 	"time"
 
-	"github.com/XiaoMi/talos-sdk-golang/thrift/auth"
-	"github.com/XiaoMi/talos-sdk-golang/thrift/common"
-	"github.com/XiaoMi/talos-sdk-golang/thrift/message"
-	"github.com/XiaoMi/talos-sdk-golang/thrift/thrift"
-	"github.com/XiaoMi/talos-sdk-golang/thrift/topic"
+	"github.com/MapleLove2014/talos-sdk-golang/thrift/auth"
+	"github.com/MapleLove2014/talos-sdk-golang/thrift/common"
+	"github.com/MapleLove2014/talos-sdk-golang/thrift/message"
+	"github.com/MapleLove2014/talos-sdk-golang/thrift/thrift"
+	"github.com/MapleLove2014/talos-sdk-golang/thrift/topic"
 	"github.com/gofrs/uuid"
 	"github.com/sirupsen/logrus"
 )
@@ -386,11 +386,11 @@ func GetClientIP() string {
 	}
 	for _, iface := range ifaces {
 		// interface down
-		if iface.Flags & net.FlagUp == 0 {
+		if iface.Flags&net.FlagUp == 0 {
 			continue
 		}
 		// loopback interface
-		if iface.Flags & net.FlagLoopback != 0 {
+		if iface.Flags&net.FlagLoopback != 0 {
 			continue
 		}
 		addrs, err := iface.Addrs()

@@ -13,12 +13,12 @@ import (
 	"sync"
 	"time"
 
-	"github.com/XiaoMi/talos-sdk-golang/admin"
-	"github.com/XiaoMi/talos-sdk-golang/client"
-	"github.com/XiaoMi/talos-sdk-golang/thrift/auth"
-	"github.com/XiaoMi/talos-sdk-golang/thrift/consumer"
-	"github.com/XiaoMi/talos-sdk-golang/thrift/topic"
-	"github.com/XiaoMi/talos-sdk-golang/utils"
+	"github.com/MapleLove2014/talos-sdk-golang/admin"
+	"github.com/MapleLove2014/talos-sdk-golang/client"
+	"github.com/MapleLove2014/talos-sdk-golang/thrift/auth"
+	"github.com/MapleLove2014/talos-sdk-golang/thrift/consumer"
+	"github.com/MapleLove2014/talos-sdk-golang/thrift/topic"
+	"github.com/MapleLove2014/talos-sdk-golang/utils"
 	"github.com/sirupsen/logrus"
 )
 
